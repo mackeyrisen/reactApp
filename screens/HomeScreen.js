@@ -17,13 +17,21 @@ export default function HomeScreen({navigation}){
     return(
         <ScrollView>
             {products.map(product=>(
-                <View key={product.id} style={styles.container}>
-                    <Image source={{ uri: product.img_url,}} style={styles.image}/>
-                    <Text>{product.name}</Text>
-                </View>
+                <Product key={product.id} title={product.name} image={product.img_url}/>
             ))}
             <View style={{height:120}}/>
         </ScrollView>
+    );
+}
+
+function Product(props){
+    var url = props.image;
+    var title = props.title;
+    return (
+        <View style={styles.container}>
+            <Image source={{ uri:url,}} style={styles.image}/>
+             <Text>{title}</Text>
+        </View>
     );
 }
 
@@ -44,3 +52,4 @@ const styles = StyleSheet.create({
         height: 250
     }
 });
+       

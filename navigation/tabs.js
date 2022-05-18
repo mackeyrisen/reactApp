@@ -35,13 +35,14 @@ export default function Tabs(){
             }}
             screenOptions={{
                 tabBarStyle: { 
+                    flex:1,
                     position:'absolute',
                     bottom:15,
                     left:20,
                     right:20,
                     elevation:0,
                     backgroundColor:'#ffffff',
-                    borderRadius:15,
+                    borderRadius:35,
                     height:70,
                     ...style.shadow,
                     }
